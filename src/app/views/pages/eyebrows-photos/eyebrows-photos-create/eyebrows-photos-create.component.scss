@@ -1,0 +1,33 @@
+.label {
+  padding: 10px 15px;
+  cursor: pointer;
+  background: #3f51b5;
+  color: white;
+  border-radius: 30px;
+  margin: 10px auto 0;
+}
+
+.hide-input {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+img {
+    border-radius: 20px;
+}
+
+.text-banner {
+    font-weight: 500;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translate(-50%);
+    margin: 0;
+    background: white;
+    padding: 5px;
+    border-radius: 5px;
+}

@@ -1,0 +1,105 @@
+<mat-horizontal-stepper [linear]="isLinear" #stepper>
+  <mat-step [stepControl]="firstFormGroup">
+    <form [formGroup]="firstFormGroup">
+      <ng-template matStepLabel>Φρύδια πριν</ng-template>
+      <div fxLayout="column" fxLayoutAlign="space-around center">
+        <img [src]="previusPhoto" height="200" />
+        <p
+          *ngIf="
+            previusPhoto == '../../../../../assets/img/eyebrows-skeleton.jpg'
+          "
+          style="margin: 10px 0 0"
+        >
+          Ανεβάστε φωτογραφία φρυδιών πριν την αλλαγή τους
+        </p>
+        <label for="file" mat-raised-button class="label"
+          >Ανεβάστε φωτογραφία</label
+        >
+        <input
+          accept="image/*"
+          name="file"
+          type="file"
+          id="file"
+          class="hide-input"
+          (change)="onFileChange($event, 'previusPhoto')"
+          style="display:none"
+        />
+      </div>
+      <button style="float: right;" mat-stroked-button matStepperNext>
+        Επόμενο
+      </button>
+    </form>
+  </mat-step>
+  <mat-step [stepControl]="secondFormGroup">
+    <form [formGroup]="secondFormGroup">
+      <ng-template matStepLabel>Φρύδια μετά</ng-template>
+      <div fxLayout="column" fxLayoutAlign="space-around center">
+        <img [src]="nextPhoto" height="200" />
+        <p
+          *ngIf="nextPhoto == '../../../../../assets/img/eyebrows-skeleton.jpg'"
+          style="margin: 10px 0 0"
+        >
+          Ανεβάστε φωτογραφία φρυδιών μετά την αλλαγή τους
+        </p>
+        <label for="file1" mat-raised-button class="label"
+          >Ανεβάστε φωτογραφία</label
+        >
+        <input
+          accept="image/*"
+          name="file1"
+          type="file"
+          id="file1"
+          class="hide-input"
+          (change)="onFileChange($event, 'nextPhoto')"
+          style="display:none"
+        />
+      </div>
+      <div>
+        <button mat-stroked-button matStepperPrevious>Πίσω</button>
+        <button style="float: right;" mat-stroked-button matStepperNext>
+          Επόμενο
+        </button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step [stepControl]="thirdFormGroup">
+    <form [formGroup]="thirdFormGroup">
+      <ng-template matStepLabel>Περιγραφή</ng-template>
+      <div fxLayout="column" fxLayoutAlign="space-around center">
+        <p
+          style="
+            margin: 10px 0;
+            font-weight: 500;
+            font-size: 15pt;"
+        >
+          Επιβεβαίωση
+        </p>
+        <div style="position: relative;">
+          <img [src]="previusPhoto" height="200" />
+          <p class="text-banner">Πριν</p>
+        </div>
+        <div style="position: relative;">
+          <img style="margin-top:10px" [src]="nextPhoto" height="200" />
+          <p class="text-banner">Μετά</p>
+        </div>
+        <mat-checkbox style="margin: 10px 0">Προσθήκη στην αρχική</mat-checkbox>
+      </div>
+      <div>
+        <button mat-stroked-button matStepperPrevious>Πίσω</button>
+        <button style="float: right;" mat-stroked-button matStepperNext>
+          Επόμενο
+        </button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step>
+    <ng-template matStepLabel>Ολοκλήρωση</ng-template>
+    <p>You are now done.</p>
+    <div>
+      <button mat-stroked-button matStepperPrevious>Πίσω</button>
+      <button style="float: right;" mat-stroked-button matStepperNext>
+        Ολοκλήρωση
+      </button>
+    </div>
+  </mat-step>
+</mat-horizontal-stepper>

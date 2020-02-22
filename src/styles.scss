@@ -1,0 +1,107 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~ng-uikit-pro-standard/assets/scss/core/colors';
+@import '~ng-uikit-pro-standard/assets/scss/core/variables';
+@import '~ng-uikit-pro-standard/assets/scss/core/variables-pro';
+
+@import '~ng-uikit-pro-standard/assets/scss/sections-pro/_contacts-pro.scss';
+@import '~ng-uikit-pro-standard/assets/scss/sections-pro/_magazine-pro.scss';
+@import '~ng-uikit-pro-standard/assets/scss/sections-pro/_pricing-pro.scss';
+@import '~ng-uikit-pro-standard/assets/scss/sections-pro/_social-pro.scss';
+@import '~ng-uikit-pro-standard/assets/scss/sections-pro/_team-pro.scss';
+@import '~ng-uikit-pro-standard/assets/scss/sections-pro/_templates-pro.scss';
+@import '~ng-uikit-pro-standard/assets/scss/sections-pro/_testimonials-pro.scss';
+@import '~ng-uikit-pro-standard/assets/scss/addons-pro/_blog-pro.scss';
+@import '~ng-uikit-pro-standard/assets/scss/addons-pro/_chat-pro.scss';
+@import '~ng-uikit-pro-standard/assets/scss/addons-pro/_ecommerce-pro.scss';
+@import '~ng-uikit-pro-standard/assets/scss/addons-pro/_steppers-pro.scss';
+@import '~ng-uikit-pro-standard/assets/scss/addons-pro/_timeline-pro.scss';
+@import '~ng-uikit-pro-standard/assets/scss/addons-pro/_timelines-pro.scss';
+
+body {
+  background-color: #eee;
+}
+
+.card.card-cascade .view.gradient-card-header {
+  padding: 1rem 1rem;
+  text-align: center;
+}
+
+.card.card-cascade h3,
+.card.card-cascade h4 {
+  margin-bottom: 0px;
+}
+.login-card {
+  background-color: rgba(229, 228, 255, 0.2);
+}
+.blue-gradient {
+  background: -webkit-linear-gradient(50deg, #45cafc, #303f9f);
+  background: linear-gradient(40deg, #45cafc, #4285f4);
+}
+
+.datepickers .md-form,
+.inputs .md-form {
+  margin-top: 0 !important;
+}
+
+.modal-full-height.modal-bottom > .modal-content {
+  position: absolute !important;
+  bottom: 0;
+}
+.view {
+  .full-bg-img.mask {
+    overflow-y: scroll;
+  }
+}
+
+.side-nav .collapsible {
+  margin: 0 !important;
+}
+
+.side-nav .logo-wrapper, .side-nav .logo-wrapper a {
+  height: 100% !important;
+}
+
+.side-nav .logo-wrapper img {
+    padding: 0 !important;
+    width: 110px;
+    margin: 10px auto;
+    display: block;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.mat-tab-body-wrapper {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  transition: height .5s cubic-bezier(.35,0,.25,1);
+  background: white;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.mat-tab-header {
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  flex-shrink: 0;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+}
+
+.mat-tab-label {
+  height: 48px;
+  padding: 0 24px;
+  cursor: pointer;
+  background: #00c4ff;
+  box-sizing: border-box;
+  opacity: .6;
+  min-width: 160px;
+  text-align: center;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+  width: 100%;
+  position: relative;
+}
